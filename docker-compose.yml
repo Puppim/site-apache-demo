@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  apache:
+    build: .
+    ports:
+      - 8080:80
+    networks:
+      - mynet
+networks:
+   mynet:
+     driver: bridge
